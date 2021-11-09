@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-interface Person {name:string, age:number}
-
+import { Component } from '@angular/core';
+interface  Person {name : string, age : number}
 
 @Component({
   selector: 'app-root',
@@ -9,16 +8,16 @@ interface Person {name:string, age:number}
 })
 export class AppComponent {
 
-
-  julien: Person = {name:'julien', age:29}
+ eddy: Person = {name: "eddy", age: 32}
   persons: Person[]= [
-    this.julien,
-    {name:'julien', age:29},
-    {name:'eddy', age:32},
-    {name:'toto', age:16},
+    this.eddy,
+    {name: "toto", age : 40},
+    {name: "tata", age : 20},
+    {name: "tete", age : 69}
+
   ]
-  constructor(){
-    this.julien.age= 35;
+
+  constructor() {
+   this.eddy.age = 35;
   }
 }
-

@@ -1,22 +1,13 @@
-import { Component } from '@angular/core';
-import{PRODUCTS} from './mock-data';
+import {Component} from '@angular/core';
+import {PRODUCTS} from "./mock-data";
+import {Product} from "../../model/Products";
 
-interface Product {
-  id: number,
-  name: string,
-  price: number,
-  stock: number,
-  picture: string,
-}
-
-export class ButtonTypesExample {}
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  products: Product[] = PRODUCTS;
-
+products: Product[] = PRODUCTS;
 }
