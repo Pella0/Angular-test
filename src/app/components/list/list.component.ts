@@ -1,17 +1,20 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import { Card } from '../../model/Card'
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
-  @Input() data:any;
-  personPicture: string = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+export class ListComponent{
+  
+  @Input() data:Card[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(){
+    this.data= [];
   }
+
+
+  
 
 }
