@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
-import {PRODUCTS} from "./mock-data";
+import {PRODUCTS} from "../../../../mock-data";
 import {Product} from "../../model/Products";
 import {Card} from "../../model/Card";
+import {ProductService} from "../../services/product.service";
 
 
 
@@ -11,13 +12,18 @@ import {Card} from "../../model/Card";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-products: Product[] = PRODUCTS;
+
+constructor(private productService: ProductService){
+
+}
 
 data:Card[]= [];
 
 ngOnInit(){
-  this.data= this.products.map((product)=>{
-    return {title: product.name, subTitle: product.price + ' €', image: product.picture }
-  })
+  this.productService.getProducts().subscribe((products) => {
+    this.data= products.map((product)=>{
+      return {title: product.name, subTitle: product.price + ' €', image: product.picture }
+    })
+  });
 }
 }
