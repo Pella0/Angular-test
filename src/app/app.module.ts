@@ -9,6 +9,8 @@ import {MatButtonModule} from "@angular/material/button";
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -31,7 +33,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
   exports:[RouterModule],
   bootstrap: [AppComponent]

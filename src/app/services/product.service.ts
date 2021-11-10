@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable} from 'rxjs';
 import { Product } from '../model/Products';
 
 
@@ -7,9 +8,12 @@ import { Product } from '../model/Products';
   providedIn: 'root'
 })
 export class ProductService {
+  private API_URL ='';
+  constructor(private http:HttpClient) { 
+    
+  }
 
   getProducts():Observable<Product[]>{
-    return of([])
+    return this.http.get<Product[]>(this.API_URL);
   }
-  constructor() { }
 }
