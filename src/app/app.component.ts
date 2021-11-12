@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-interface  Person {name : string, age : number}
+import { Component, OnInit } from '@angular/core';
+
+//interface Person { name:string, age:number};
 
 @Component({
   selector: 'app-root',
@@ -7,17 +8,19 @@ interface  Person {name : string, age : number}
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
- eddy: Person = {name: "eddy", age: 32}
-  persons: Person[]= [
-    this.eddy,
-    {name: "toto", age : 40},
-    {name: "tata", age : 20},
-    {name: "tete", age : 69}
-
+  /*khalid:Person = {
+    name:'Khalid',
+    age:28
+  }
+  persons: Person[] = [
+    this.khalid,
+    {name: 'Miguel', age:25},
+    {name: 'Johnny', age:18},
+    {name: 'Roberto', age:55},
   ]
 
-  constructor() {
-   this.eddy.age = 35;
-  }
+  constructor(){
+    this.khalid.age = 35;
+  }*/
+  
 }
